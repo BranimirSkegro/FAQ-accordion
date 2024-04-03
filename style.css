@@ -52,7 +52,7 @@ main {
 
 .box {
   width           : 60rem;
-  max-height      : 65rem;
+  max-height      : 95rem;
   background-color: var(--neutral-white);
   border-radius   : 20px;
   box-shadow      : 0 0 28px -2px hsl(291, 10%, 74%);
