@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --neutral-white : hsl(0, 0%, 100%);
+  --light-pink    : hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple   : hsl(292, 42%, 14%);
+  --perple        : hsl(293, 89%, 38%);
+}
+
+
+
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size      : 62.5%;
+  overflow-x     : hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image : url(./assets/images/background-pattern-desktop.svg);
+  background-color : var(--light-pink);
+  background-size  : contain;
+  background-repeat: no-repeat;
+  font-size        : 1.6rem;
+  font-family      : "Work Sans", serif;
+
+}
+
+.attribution {
+  font-size : 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+main {
+
+  width          : 100%;
+  height         : 100vh;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+.box {
+  width           : 60rem;
+  max-height      : 65rem;
+  background-color: var(--neutral-white);
+  border-radius   : 20px;
+  box-shadow      : 0 0 28px -2px hsl(291, 10%, 74%);
+  padding         : 3rem;
+  display         : flex;
+  flex-direction  : column;
+  gap             : 20px;
+}
+
+section {
+  display              : grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows   : auto;
+  gap                  : 10px;
+  align-items          : center;
+}
+
+hr {
+  border: 1px solid rgb(241, 225, 225);
+}
+
+header {
+  display    : flex;
+  align-items: center;
+  gap        : 20px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.hidden-text {
+  max-height: 0;
+  overflow  : hidden;
+  transition: 0.3s ease;
+}
+
+.show-text {
+  max-height: 100rem;
+  transition: 2s ease;
+}
+
+h2 {
+  font-size : 1.6rem;
+  color     : var(--dark-purple);
+  align-self: center;
+}
+
+h2:hover {
+  cursor    : pointer;
+  color     : var(--perple);
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+  }
+}
+
+@media screen and (max-width:675px) {
+  body {
+    padding: 0 3rem;
+  }
+
+}
